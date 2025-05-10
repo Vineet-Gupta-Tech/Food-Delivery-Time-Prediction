@@ -113,8 +113,4 @@ if predict_btn:
     except Exception as e:
         st.error(f"❌ An error occurred during prediction: {e}")
 
-# Footer
-st.markdown("""
----
-Made with ❤️ using Streamlit | [GitHub](https://github.com)
-""", unsafe_allow_html=True)
+
