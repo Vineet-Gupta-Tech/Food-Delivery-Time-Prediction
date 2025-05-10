@@ -32,6 +32,9 @@ st.markdown("""
         background-color: #fff;
         color: black;
     }
+    .sidebar .sidebar-content {
+        padding-top: 20px;
+    }
     </style>
 """, unsafe_allow_html=True)
 
@@ -55,6 +58,7 @@ except FileNotFoundError:
 with st.sidebar:
     st.header("📋 Input Order Details")
 
+    # Use columns for input fields
     col1, col2 = st.columns(2)
     with col1:
         distance_km = st.number_input("🚚 Delivery Distance (km)", min_value=1.0, max_value=100.0, step=0.1)
@@ -109,8 +113,4 @@ if predict_btn:
     except Exception as e:
         st.error(f"❌ An error occurred during prediction: {e}")
 
-# Footer
-st.markdown("""
----
-Made with ❤️ using Streamlit | [GitHub](https://github.com)
-""", unsafe_allow_html=True)
+
